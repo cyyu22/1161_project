@@ -4,8 +4,14 @@ div {
 
 section {
     font-size: 20px;
+    font-weight: bold;
 }
 
 button {
+    color:darkred;
     font-size: 15px;
+    font-weight: bold;
+}
+input {
+    font-size: 14px;
 }
