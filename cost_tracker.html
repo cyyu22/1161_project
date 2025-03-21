@@ -2,11 +2,10 @@
 <html lang="en">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="cost_styles.css">
-    <div>
-        <section id="Cost today" name="Cost today">Please enter how much you spent in Canadian Dollars<section><input type="number" placeholder="$0.00">
-        <section id="Type of cost" name="Type of cost">What did you spend it on?</section><input type="" placeholder="E.g Groceries">
-    </div> <br>
-    <div>
-        <button type="submit">Add cost</button>
-    </div>
+    <header>Manual Cost Tracking Page</header>
+    <form id="form" onsubmit="return false";>
+        <section id="Cost today">How much did you spend today?</section><input type="number" id="Cost today" placeholder="$0.00"><br>
+        <section id="costCategory">What did you spend it on?</section><input type="text" id="costCategory" placeholder="E.g Groceries"><br>
+        <br><input type="submit" id="update_daily_costs" onlick="costs()" value="Update daily cost">
+    </form>
 </html>

@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="cost_styles.css">
+    <header style="background-color: lightsalmon;">Cost Limit Setter</header>
+    <form id="form" onsubmit="return false";>
+        <section id="dailyLimit">Daily cost limit</section><input type="number" id="dailyLimit" placeholder="$0.00"><br>
+        <section id="monthlyLimit">Monthly cost limit</section><input type="number" id="monthlyLimit" placeholder="$0.00"><br>
+        <br><input type="submit" id="update_limits" onlick="limit_setter()" value="Update cost limits">
+    </form>
+</html>
