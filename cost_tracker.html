@@ -5,7 +5,20 @@
     <header>Manual Cost Tracking Page</header>
     <form id="form" onsubmit="return false";>
         <section id="Cost today">How much did you spend today?</section><input type="number" id="Cost today" placeholder="$0.00"><br>
-        <section id="costCategory">What did you spend it on?</section><input type="text" id="costCategory" placeholder="E.g Groceries"><br>
-        <br><input type="submit" id="update_daily_costs" onlick="costs()" value="Update daily cost">
+        <section id="costCategory">What did you spend it on?</section><input type="radio" id="Groceries" name="costCategory" value="Groceries">
+        <label for="Groceries">Groceries</label><br>
+        <input type="radio" id="Food" name="costCategory" value="Food">
+        <label for="Food">Food (Restuarant or Fast food including delivery)</label><br>
+        <input type="radio" id="Clothes" name="costCategory" value="Clothes">
+        <label for="Clothes">Clothing</label><br>
+        <input type="radio" id="Entertainment" name="costCategory"  value="Entertainment">
+        <label for="Entertainment">Entertainment (Games, Movies, etc)</label><br>
+        <input type="radio" id="rent" name="costCategory" value="rent">
+        <label for="rent">Rent / Shelter costs</label><br>
+        <input type="radio" id="Transport" name="costCategory" value="Transport">
+        <label for="Transport">Transport (Gas fees, bus fees)</label><br>
+        <input type="radio" id="Other" name="costCategory" value="Other">
+        <label for="Other">Other costs</label><br>
+        <br><input type="submit" id="update_daily_costs" onclick="costs()" value="Update daily cost" onclick="">
     </form>
 </html>

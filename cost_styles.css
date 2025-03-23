@@ -1,5 +1,7 @@
 form {
     font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    padding-top: 40px;
 }
 
 section {
@@ -31,4 +33,5 @@ header {
     font-size: 30px;
     background-color: lightgreen;
     padding: 10px;
+
 }
