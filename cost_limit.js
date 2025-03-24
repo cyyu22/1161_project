@@ -73,18 +73,25 @@ function cost_organizer() {
     }
 }
 
-function report(reporttype) {
+function report() {
     if (reporttype == "Daily") {
         document.getElementById("ReportTime").innerText = "Daily report";
-        document.getElementById("reporth1").innerText = "Current report of the day.";
-        document.getElementById("reportbody").innerText = `Money spent today:$${daycost}
-        Amount of money left until daily cost limit is reached: $${dayLimit - daycost}
+        document.getElementById("reporth2").innerText = "Current report of the day.";
+        document.getElementById("reportp").innerText = `Money spent today:$${daycost.toFixed(2)}
+        Amount of money left until daily cost limit is reached: $${(dayLimit - daycost).toFixed(2)}
         `;
     }
     else {
-        document.getElementById("ReportTime").innerText = "Monthly report";
-        document.getElementById("reporth1").innerText = "Current report of the Month.";
-        document.getElementById("reportbody").innerText = `Money spent this month:$${monthcost}
-        Amount of money left until monthly cost limit is reached: $${monthLimit - monthcost}`;
+        document.getElementById("monthreport").innerText = "Monthly report";
+        document.getElementById("monthreporth2").innerText = "Current report of the Month.";
+        document.getElementById("monthreportp").innerText = `Money spent this month:$${monthcost.toFixed(2)}
+        Amount of money left until monthly cost limit is reached: $${(monthLimit - monthcost).toFixed(2)}`;
+    }
+}
+
+function reportconfirm() {
+    if (confirm("Are you sure you want to generate a report?")) {
+        window.open("cost_report.html");
+        report();
     }
 }
