@@ -4,8 +4,12 @@ form {
     padding-top: 40px;
 }
 
+body {
+    background-color: beige;
+}
+
 section {
-    font-size: 20px;
+    font-size: 2em;
     font-weight: bold;
     padding-top: 15px;
     padding-bottom: 8px;
@@ -14,7 +18,7 @@ section {
 
 #update_daily_costs {
     color:darkred;
-    font-size: 15px;
+    font-size: 1.5em;
     font-weight: bold;
     padding: 6px;
 }
@@ -30,11 +34,73 @@ input {
     padding: 5px;
 }
 header {
-    font-size: 30px;
+    font-size: 3em;
     background-color: lightgreen;
-    padding: 10px;
+    padding: 10px 16px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight:bold;
+    position:sticky;
+    top:0;
+
+
 
 }
 div {
     text-align: center;
+}
+
+button {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+label {
+    font-size: 1.2em;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    background-color: lightgreen;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.sidebar {
+    margin:0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.sidebar a.active {
+    background-color: lightgreen;
+    color: white;
+}
+
+.sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
 }

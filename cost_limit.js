@@ -1,5 +1,7 @@
 let daycost = 0;
 let monthcost = 0;
+let dayLimit;
+let monthLimit;
 
 let costs_organized_month = {
     "Groceries":[],
@@ -21,22 +23,24 @@ let costs_organized_day = {
     "Other":[]
 }
 
-function costs() 
-{
-daycost += document.getElementById("Cost today");
-if (daycost >= (dayLimit * 0.8)) {
-    limit_warning(false);
-}
-monthcost += document.getElementById("Cost today");
-if (monthcost >= (dayLimit * 0.8)) {
-    limit_warning(true);
-}
+let cost_update = document.getElementById("update_daily_costs");
+document.addEventListener("DOMContentLoaded", cost_update.onclick = costs());
+
+function costs() {
+    daycost += Number(document.getElementById("Cost today"));
+    if ((daycost >= (dayLimit * 0.8)) && (dayLimit != 0)) {
+        limit_warning(false);
+    }
+    monthcost += Number(document.getElementById("Cost today"));
+    if ((monthcost >= (monthLimit * 0.8)) && (monthLimit != 0)) {
+       limit_warning(true);
+    }
 }
 
 function limit_setter()
 {
-    let dayLimit = document.getElementById("dailyLimit");
-    let monthLimit = document.getElementById("monthlyLimit");
+    dayLimit = Number(document.getElementById("dailyLimit"));
+    monthLimit = Number(document.getElementById("monthlyLimit"));
     alert(input)
 }
 
@@ -73,25 +77,23 @@ function cost_organizer() {
     }
 }
 
+function reportgen() {
+    cost_report.html.onload = report()
+}
+
 function report() {
-    if (reporttype == "Daily") {
-        document.getElementById("ReportTime").innerText = "Daily report";
-        document.getElementById("reporth2").innerText = "Current report of the day.";
-        document.getElementById("reportp").innerText = `Money spent today:$${daycost.toFixed(2)}
-        Amount of money left until daily cost limit is reached: $${(dayLimit - daycost).toFixed(2)}
-        `;
-    }
-    else {
-        document.getElementById("monthreport").innerText = "Monthly report";
-        document.getElementById("monthreporth2").innerText = "Current report of the Month.";
-        document.getElementById("monthreportp").innerText = `Money spent this month:$${monthcost.toFixed(2)}
+
+        document.getElementById("reporth2").textContent = "Current report of the day.";
+        document.getElementById("reportp").textContent = `Money spent today:$${daycost.toFixed(2)}
+        Amount of money left until daily cost limit is reached: $${(dayLimit - daycost).toFixed(2)}`;
+        document.getElementById("monthreport").textContent = "Monthly report";
+        document.getElementById("monthreporth2").textContent = "Current report of the Month.";
+        document.getElementById("monthreportp").textContent = `Money spent this month:$${monthcost.toFixed(2)}
         Amount of money left until monthly cost limit is reached: $${(monthLimit - monthcost).toFixed(2)}`;
-    }
 }
 
 function reportconfirm() {
     if (confirm("Are you sure you want to generate a report?")) {
         window.open("cost_report.html");
-        report();
     }
 }

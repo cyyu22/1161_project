@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <link type="stylesheet" href="report.css">
-    <script src="cost_limit.js"></script>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="report.css">
-    <header id="ReportTime"></header>
+    <header id="ReportTime">Report</header>
     <div>
         <h2 id="reporth2"></h2>
         <p id="reportp"></p>
@@ -12,6 +11,9 @@
     <h1 id="monthreport"></h1>
     <div>
         <h2 id="monthreporth2"></h2>
-        <p id="monthreportp" onload="report()"></p>
+        <p id="monthreportp"></p>
     </div>
+    <script src="cost_limit.js">
+        window.addEventListener("DOMContentLoaded", report());
+    </script>
 </html>

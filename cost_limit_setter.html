@@ -1,11 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
     <meta charset="UTF-8">
+    <script src="cost_limit.js"></script>
     <link rel="stylesheet" href="cost_styles.css">
-    <header style="background-color: lightsalmon;">Cost Limit Setter</header>
-    <form id="form" onsubmit="return false";>
-        <section id="dailyLimit">Daily cost limit</section><input type="number" id="dailyLimit" placeholder="$0.00"><br>
-        <section id="monthlyLimit">Monthly cost limit</section><input type="number" id="monthlyLimit" placeholder="$0.00"><br>
-        <br><input type="submit" id="update_limits" onlick="limit_setter()" value="Update cost limits">
-    </form>
+    <header>Cost Limits, Savings goals, and Wage setting</header>
+    <body>
+        <div class="sidebar">
+            <a href="index.html">Home</a>
+            <a href="cost_tracker.html">Cost Tracking</a>
+            <a class="active" href="cost_limit_setter.html">Limiting, Savings, and Goals</a>
+            <a href="cost_report.html">Generate Report</a>
+        </div>
+        <div class="content">
+            <form>
+                <section id="dailyLimit">Daily cost limit</section><br><input type="number" id="dailyLimit" placeholder="$0.00"><br>
+                <section id="monthlyLimit">Monthly cost limit</section><br><input type="number" id="monthlyLimit" placeholder="$0.00"><br><br>
+                <br><button id="update_limits">Set Cost Limits</button>
+            </form>
+            <h1>Savings Goal Setting</h1>
+            <form>
+                <section id="shortGoal">Short-Term savings goal</section><br><input type="number" id="shortGoal" placeholder="$0.00"><br>
+                <section id="longGoal">Long-Term savings goal</section><br><input type="number" id="longGoal" placeholder="$0.00"><br><br>
+                <br><button id="setGoals">Set Savings Goals</button>
+            </form>
+            <h1>Wage setting</h1>
+            <form>
+                <section>Wage Type</section>
+                <input type="radio" id="biweek" name="wagetype">
+                <label for="biweek">Bi-Weekly</label><br><br>
+                <input type="radio" id="monthly" name="wagetype">
+                <label for="monthly">Monthly</label><br>
+                <section id="wage">Average income</section><input type="number" id="wage" placeholder="$0.00">
+            </form><br><br>
+        </div>
+    </body>
+    
 </html>
