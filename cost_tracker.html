@@ -3,10 +3,12 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="cost_styles.css">
     <script src="cost_limit.js"></script>
+    <title>Cost Tracking</title>
     <header>Manual Cost Tracking Page</header>
     <body>
         <div class="sidebar">
             <a href="index.html">Home</a>
+            <a href="about.html">About us</a>
             <a class="active" href="cost_tracker.html">Cost Tracking</a>
             <a href="cost_limit_setter.html">Limiting, Savings, and Goals</a>
             <a href="cost_report.html">Generate Report</a>
@@ -21,10 +23,10 @@
                     <option value="Clothes" id="Clothes">Clothing</option>
                     <option value="Entertainment" id="Entertainment">Entertainment (Games, Movies, etc)</option>
                     <option value="Rent" id="Rent">Rent / Shelter costs</option>
-                    <option value="Transport" id="Transport">Transpot (Gas fees, bus fees)</option>
+                    <option value="Transport" id="Transport">Transport (Gas fees, bus fees)</option>
                     <option value="Other" id="Other">Other</option>
                 </select><br><br>
-                <br><button id="update_daily_costs">Update Daily Cost</button>
+                <br><button id="update_daily_costs" onclick="costs()" onclick="cost_organizer()">Update Daily Cost</button>
             </form><br><br><br>
             <form>
                 <button style="font-family: 'Times New Roman', Times, serif;font-weight: bold; font-size: 2em; text-align: center;" onclick="reportconfirm()">Generate Report</button>

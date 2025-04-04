@@ -104,3 +104,33 @@ div.content {
     padding: 1px 16px;
     height: 1000px;
 }
+
+h3 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2em;
+    color: yellowgreen;
+}
+
+p {
+    background-color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2em;
+    line-height: 1.8;
+    width: 600px;
+    padding:35px 50px 50px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+div.aboutContent {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+}
+
+div.abtimg {
+    margin-top: 150px;
+    
+}
