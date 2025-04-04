@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
     <meta charset="UTF-8">
-    <script src="cost_limit.js"></script>
     <link rel="stylesheet" href="cost_styles.css">
     <title>Limits, Goals, and Income</title>
     <header>Cost Limits, Savings goals, and Wage setting</header>
@@ -11,7 +10,7 @@
             <a href="about.html">About us</a>
             <a href="cost_tracker.html">Cost Tracking</a>
             <a class="active" href="cost_limit_setter.html">Limiting, Savings, and Goals</a>
-            <a href="cost_report.html">Generate Report</a>
+            <a onclick="reportconfirm()">Generate Report</a>
         </div>
         <div class="content">
             <form>
@@ -35,6 +34,7 @@
                 <section id="wage">Average income</section><input type="number" id="wage" placeholder="$0.00">
             </form><br><br>
         </div>
+        <script defer src="cost_limit.js"></script>
     </body>
     
 </html>

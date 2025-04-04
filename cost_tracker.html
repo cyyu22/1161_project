@@ -2,7 +2,6 @@
 <html lang="en">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="cost_styles.css">
-    <script src="cost_limit.js"></script>
     <title>Cost Tracking</title>
     <header>Manual Cost Tracking Page</header>
     <body>
@@ -11,11 +10,11 @@
             <a href="about.html">About us</a>
             <a class="active" href="cost_tracker.html">Cost Tracking</a>
             <a href="cost_limit_setter.html">Limiting, Savings, and Goals</a>
-            <a href="cost_report.html">Generate Report</a>
+            <a onclick="reportconfirm()">Generate Report</a>
         </div>
         <div class="content">
             <form id="form";>
-                <section id="Cost today">How much did you spend today?</section><input type="number" id="Cost today" placeholder="$0.00"><br><br>
+                <section>How much did you spend today?</section><input id="dailyCostInput" type="number" placeholder="$0.00"><br><br>
                 <section id="costCategory">What did you spend it on?</section>
                 <select name="costCategory">
                     <option value="Groceries" id="Groceries">Groceries</option>
@@ -26,11 +25,9 @@
                     <option value="Transport" id="Transport">Transport (Gas fees, bus fees)</option>
                     <option value="Other" id="Other">Other</option>
                 </select><br><br>
-                <br><button id="update_daily_costs" onclick="costs()" onclick="cost_organizer()">Update Daily Cost</button>
+                <br><button id="update_daily_costs" type="button">Update Daily Cost</button>
             </form><br><br><br>
-            <form>
-                <button style="font-family: 'Times New Roman', Times, serif;font-weight: bold; font-size: 2em; text-align: center;" onclick="reportconfirm()">Generate Report</button>
-            </form>
         </div>
+        <script defer src="cost_limit.js"></script>
     </body>
 </html>

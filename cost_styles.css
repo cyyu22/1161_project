@@ -134,3 +134,15 @@ div.abtimg {
     margin-top: 150px;
     
 }
+
+div.homeimg {
+    margin-top: 150px;
+}
+
+div.homeContent {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+}
